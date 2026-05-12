@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // Avoid FOUC (Flash of Unstyled Content) by checking theme early
+      if (localStorage.getItem('soberlo-theme') === 'dark' || (!('soberlo-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SoBERLO - Your private sobriety companion. Track your journey, set goals, and build healthy habits. All data stored locally on your device." />
+    <meta name="keywords" content="sobriety, addiction recovery, habit tracker, mental health, mood tracker, zero server, privacy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="mask-icon" href="/mask-icon.svg" color="#1D4ED8" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SoBERLO - Your Private Sobriety Companion" />
+    <meta property="og:description" content="Track your journey, set goals, and build healthy habits. All data stored securely on your device." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="SoBERLO - Sobriety Companion" />
+    <meta property="twitter:description" content="Track your journey, set goals, and build healthy habits. All data stored securely on your device." />
+    
+    <title>SoBERLO | Sobriety & Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-brand-light">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
